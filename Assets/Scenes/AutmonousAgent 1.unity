@@ -812,6 +812,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Agent
       objectReference: {fileID: 0}
+    - target: {fileID: 5754022213809568913, guid: caa2bc3567787ca4880a848a7bf9b89b, type: 3}
+      propertyPath: wanderRadius
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754022213809568913, guid: caa2bc3567787ca4880a848a7bf9b89b, type: 3}
+      propertyPath: wanderDistance
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5754022213809568916, guid: caa2bc3567787ca4880a848a7bf9b89b, type: 3}
+      propertyPath: maxAngle
+      value: 90
+      objectReference: {fileID: 0}
     - target: {fileID: 5754022213809568919, guid: caa2bc3567787ca4880a848a7bf9b89b, type: 3}
       propertyPath: m_RootOrder
       value: 3

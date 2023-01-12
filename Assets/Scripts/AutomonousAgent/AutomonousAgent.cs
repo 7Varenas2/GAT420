@@ -25,6 +25,7 @@ public class AutomonousAgent : Agent
         {
             movement.ApplyForce(Steering.Seek(this, gameObjects[0]) * 0);
             movement.ApplyForce(Steering.Flee(this, gameObjects[0]) * 1);
+            movement.ApplyForce(Steering.Wander(this));
         }
 
         // Checks if current acceleration is lower than 10% of the max force then apply Wander force

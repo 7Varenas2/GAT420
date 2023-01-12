@@ -36,6 +36,8 @@ public static class Steering
         // set point in front of agent at distance length 
         Vector3 forward = agent.transform.forward * agent.wanderDistance;
 
+        Debug.DrawRay(agent.transform.position, forward + point, Color.magenta);
+
         Vector3 force = CalculateSteering(agent, forward + point);
 
         return force;

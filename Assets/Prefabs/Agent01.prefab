@@ -17,8 +17,8 @@ GameObject:
   - component: {fileID: 5754022213809568909}
   - component: {fileID: 5754022213809568908}
   m_Layer: 0
-  m_Name: Agent 1
-  m_TagString: Untagged
+  m_Name: Agent01
+  m_TagString: Agent01
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -68,8 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perception: {fileID: 5754022213809568916}
   movement: {fileID: 5754022213809568912}
-  wanderDistance: 1
-  wanderRadius: 5
+  wanderDistance: 3
+  wanderRadius: 2
   wanderDisplacement: 30
 --- !u!114 &5754022213809568912
 MonoBehaviour:
@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tagName: Agent01
   distance: 3
-  maxAngle: 180
+  maxAngle: 90
 --- !u!136 &5754022213809568914
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -135,7 +135,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f8a04d6c6d926ce419cc12c97cb642a3, type: 2}
+  - {fileID: 2100000, guid: 7f5b4e87b12562544bcd6004020534a0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
