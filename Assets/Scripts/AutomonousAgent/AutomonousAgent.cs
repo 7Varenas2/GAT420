@@ -5,10 +5,8 @@ using UnityEngine;
 
 public class AutomonousAgent : Agent
 {
-
-    public float wanderDistance = 1;
-    public float wanderRadius = 3;
-    public float wanderDisplacement = 5;
+    public Perception flockPerception;
+    public AutonomousAgentData data;
 
     public float wanderAngle { get; set; } = 0;
 
@@ -23,9 +21,17 @@ public class AutomonousAgent : Agent
 
         if (gameObjects.Length > 0)
         {
-            movement.ApplyForce(Steering.Seek(this, gameObjects[0]) * 0);
-            movement.ApplyForce(Steering.Flee(this, gameObjects[0]) * 1);
-            movement.ApplyForce(Steering.Wander(this));
+            movement.ApplyForce(Steering.Seek(this, gameObjects[0]) * data.seekWeight);
+            movement.ApplyForce(Steering.Flee(this, gameObjects[0]) * data.fleeWeight);
+            //movement.ApplyForce(Steering.Wander(this));
+        }
+
+        gameObjects = flockPerception.GetGameObjects();
+        if (gameObjects.Length > 0)
+        {
+            movement.ApplyForce(Steering.Cohesion(this, gameObjects) * data.cohesionWeight);
+            movement.ApplyForce(Steering.Separation(this, gameObjects, data.separationRadius) * data.separationWeight);
+            movement.ApplyForce(Steering.Alignment(this, gameObjects) * data.alignmentWeight);
         }
 
         // Checks if current acceleration is lower than 10% of the max force then apply Wander force

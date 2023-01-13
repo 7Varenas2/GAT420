@@ -68,9 +68,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   perception: {fileID: 5754022213809568916}
   movement: {fileID: 5754022213809568912}
-  wanderDistance: 3
-  wanderRadius: 2
-  wanderDisplacement: 30
+  flockPerception: {fileID: 0}
+  data: {fileID: 11400000, guid: 03927acee9e3ef9428bda745a298be10, type: 2}
 --- !u!114 &5754022213809568912
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -84,7 +83,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxSpeed: 5
-  minSpeed: 5
+  minSpeed: 2
   maxForce: 10
 --- !u!114 &5754022213809568916
 MonoBehaviour:
